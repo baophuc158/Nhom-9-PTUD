@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="form-control">
-            <form action="" method="post">
+            <form action="../index.php" method="post">
                 <div class="row">
                     <div class="col-4"></div>
                     <div id="thongbao" class="col-4">

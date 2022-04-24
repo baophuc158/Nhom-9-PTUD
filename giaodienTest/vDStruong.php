@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <title>Quan ly Diem</title>
+    <title>Danh sách các trường</title>
     <style>
         * {
             margin: 0;
@@ -31,20 +31,14 @@
             float: right;
         }
         
-        #mon {
-            border: 1px solid;
-        }
-        
-        #lop {
-            border: 1px solid;
-        }
-        
         #tieude {
             margin-top: 10px;
         }
+
         a{
             color: black;
         }
+        
         a:hover{
             text-decoration: none;
             color: black ;

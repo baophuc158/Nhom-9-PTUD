@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../javascript/jquery-3.6.0.min.js"></script>
-    <title>Quan ly Diem</title>
+    <title>Cấp tài khoản</title>
     <style>
         * {
             margin: 0;
@@ -73,7 +73,7 @@
             <div class="row">
                 <div class="col-3"></div>
                 <div style="border: 1px solid" class="col-6">
-                    <form action="" method="POST">
+                    <form action="../index.php" method="POST">
                         <div class="formnhap">
                             <div class="form-group row ">
                                 <div class="col-4">

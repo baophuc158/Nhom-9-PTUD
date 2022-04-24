@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <title>Quan ly Diem</title>
+    <title>Bảng điểm giáo viên</title>
     <style>
         * {
             margin: 0;
@@ -42,6 +42,11 @@
         #tieude {
             margin-top: 10px;
         }
+        .nutluu{
+            float: right;
+            text-align: center;
+            padding-top: 20px;
+        }
     </style>
 </head>
 
@@ -66,54 +71,59 @@
 
         <div class="row">
             <div class="form-control">
-                <center><b>Bảng điểm 6A1</b></center>
-                <table border="1" cellspacing="0" style="width: 100%;">
-                    <tr style="text-align: center;">
-                        <th>STT</th>
-                        <th>Họ và tên</th>
-                        <th colspan="2">KT Miệng</th>
-                        <th colspan="2">KT 15P</th>
-                        <th colspan="2">KT 1 tiết</th>
-                        <th>Thi GK1</th>
-                        <th>Thi CK1</th>
-                        <th>Thi GK2</th>
-                        <th>Thi CK2</th>
-                        <th>TB Môn</th>
-                        <th>Nhận xét của giáo viên</th>
-                    </tr>
-                    <tr style="text-align: center;">
-                        <td>1</td>
-                        <td>Minz Khák</td>
-                        <td>9.0</td>
-                        <td>9.0</td>
-                        <td>9.0</td>
-                        <td>9.0</td>
-                        <td>9.0</td>
-                        <td>9.0</td>
-                        <td>9.0</td>
-                        <td>9.0</td>
-                        <td>9.0</td>
-                        <td>9.0</td>
-                        <td>9.0</td>
-                        <td>Học hành như cái đầu cắt moi</td>
-                    </tr>
-                    <tr style="text-align: center;">
-                        <td>2</td>
-                        <td>Puìz Mạnk</td>
-                        <td>7.0</td>
-                        <td>7.0</td>
-                        <td>7.0</td>
-                        <td>7.0</td>
-                        <td>7.0</td>
-                        <td>7.0</td>
-                        <td>7.0</td>
-                        <td>7.0</td>
-                        <td>7.0</td>
-                        <td>7.0</td>
-                        <td>7.0</td>
-                        <td>Lucky Boiz</td>
-                    </tr>
-                </table>
+                <form action="../index.php" method="post">
+                    <center><b>Bảng điểm 6A1</b></center>
+                    <table border="1" cellspacing="0" style="width: 100%;">
+                        <tr style="text-align: center;">
+                            <th>STT</th>
+                            <th>Họ và tên</th>
+                            <th colspan="2">KT Miệng</th>
+                            <th colspan="2">KT 15P</th>
+                            <th colspan="2">KT 1 tiết</th>
+                            <th>Thi GK1</th>
+                            <th>Thi CK1</th>
+                            <th>Thi GK2</th>
+                            <th>Thi CK2</th>
+                            <th>TB Môn</th>
+                            <th>Nhận xét của giáo viên</th>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td>1</td>
+                            <td>Minz Khák</td>
+                            <td>9.0</td>
+                            <td>9.0</td>
+                            <td>9.0</td>
+                            <td>9.0</td>
+                            <td>9.0</td>
+                            <td>9.0</td>
+                            <td>9.0</td>
+                            <td>9.0</td>
+                            <td>9.0</td>
+                            <td>9.0</td>
+                            <td>9.0</td>
+                            <td>Học hành như cái đầu cắt moi</td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td>2</td>
+                            <td>Puìz Mạnk</td>
+                            <td>7.0</td>
+                            <td>7.0</td>
+                            <td>7.0</td>
+                            <td>7.0</td>
+                            <td>7.0</td>
+                            <td>7.0</td>
+                            <td>7.0</td>
+                            <td>7.0</td>
+                            <td>7.0</td>
+                            <td>7.0</td>
+                            <td>7.0</td>
+                            <td>Lucky Boiz</td>
+                        </tr>
+                    </table>
+                    <div class="nutluu">
+                        <button type="submit" class="btn btn-success">Lưu</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
