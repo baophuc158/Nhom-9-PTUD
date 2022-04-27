@@ -1,117 +1,203 @@
 * {
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
 }
 
-html {
-    color: #333;
-    font-size: 62.5%;
-    font-family: 't-light', Arial;
-}
-
-.main {
-    background: rgb(34, 193, 195);
-    background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
-    font-family: "work sans";
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-}
-
-.form {
-    width: 360px;
-    min-height: 100px;
-    padding: 32px 24px;
-    text-align: center;
-    background: #fff;
-    border-radius: 8px;
-    margin: 24px;
-    align-self: center;
-    box-shadow: 0 2px 5px 0 rgba(8, 124, 241, 0.973);
-}
-
-.form .heading {
-    font-size: 3rem;
-}
-
-.form .desc {
-    text-align: center;
-    color: #636d77;
-    font-size: 1.6rem;
-    font-weight: lighter;
-    line-height: 2.4rem;
-    margin-top: 16px;
-    font-weight: 300;
-}
-
-.form-group {
-    display: flex;
-    margin-bottom: 16px;
-    flex-direction: column;
-}
-
-.form-label,
-.form-message {
-    text-align: left;
-}
-
-.form-label {
-    font-weight: 700;
-    padding-bottom: 6px;
-    line-height: 1.8rem;
-    font-size: 1.5rem;
-}
-
-.form-control {
-    height: 40px;
-    padding: 8px 12px;
-    border: 1.5px solid #b3b3b3;
-    border-radius: 4px;
-    outline: none;
-    font-size: 1.4rem;
-}
-
-.form-control:hover {
-    border-color: #1dbfaf;
-}
-
-.form-group.invalid .form-control {
-    border-color: #f33a58;
-}
-
-.form-group.invalid .form-message {
-    color: #f33a58;
-}
-
-.form-message {
-    font-size: 1.3rem;
-    line-height: 1.2rem;
-    padding: 4px 0 0;
-    color: red;
-}
-
-.form-submit {
-    outline: none;
-    margin-top: 12px;
-    padding: 12px 16px;
-    font-weight: 600;
-    color: #fff;
-    border: none;
-    width: 100%;
+body {
+    font-family: "Arial,Arial,Helvetica,sans-serif";
     font-size: 14px;
-    border-radius: 8px;
-    cursor: pointer;
-    background: linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
-    border: 0px;
-    cursor: pointer;
-    transition: opacity 0.25s ease-out;
+    line-height: 10px;
 }
 
-.form-submit:hover {
-    background-color: #1ac7b6;
+
+/* MENU TRÊN */
+
+header {
+    background-color: #88b77b;
+    top: 0;
+    margin: 0 auto;
+    border-bottom: solid 3px #ede9d0;
+    height: 50px;
+    position: relative;
 }
 
-.spacer {
-    margin-top: 36px;
+header img {
+    position: absolute;
+    left: 200px;
+}
+
+.header-tt {
+    position: absolute;
+    line-height: 20px;
+    left: 255px;
+    top: 5px;
+    color: #FFF;
+}
+
+.header-tt a {
+    color: #FFF;
+}
+
+.header-tt a:hover {
+    color: tomato;
+}
+
+
+/* END HEADER */
+
+
+/*                        đăng nhâp                */
+
+.header-login {
+    position: absolute;
+    right: 220px;
+    padding: 20px;
+    color: #FFF;
+}
+
+.header-login a {
+    color: #FFF
+}
+
+.header-login a:hover {
+    color: tomato;
+}
+
+h4 {
+    padding: 2px;
+    float: right;
+    margin-right: 50px;
+    color: #CCC;
+}
+
+h4 a {
+    color: rgba(7, 4, 4, 0.199);
+    text-decoration: none;
+}
+
+h4 a:hover {
+    color: #999;
+    text-decoration: underline;
+}
+
+
+/*                     Phần NAV (MENU)               */
+
+nav {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
+
+.logo {
+    width: 30%;
+    margin-left: 180px;
+}
+
+.menu {
+    background-color: white;
+    width: 85%;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    padding: 18px;
+    margin-top: 25px;
+    text-align: center;
+    float: right;
+    position: relative;
+}
+
+.menu ul li a {
+    display: block;
+    color: orangered;
+    text-decoration: none;
+    width: 130px;
+    font-size: 15px;
+}
+
+.menu ul li a:hover {
+    color: rgb(15, 14, 14);
+}
+
+
+/*                 Phần nội dung                              */
+
+aside {
+    width: 100%;
+    height: 100px;
+    background-color: teal;
+}
+
+aside img {
+    width: 100%;
+    height: 300px;
+}
+
+section {
+    width: 100%;
+    height: 400px;
+}
+
+section h1 {
+    margin: auto;
+    text-align: center;
+    padding: 220px;
+}
+
+
+/*chân website */
+
+#footer {
+    font-family: "Comic Sans MS";
+    float: left;
+    width: 100%;
+    height: 80px;
+    border-top: 4px solid #ff6a80;
+    color: #9e9e9e;
+    background-color: #212121;
+    line-height: 15px;
+}
+
+#footer a {
+    margin-left: 3px;
+}
+
+#footer p {
+    text-align: left;
+    margin: 0;
+    padding-top: 5px;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+#footer-right {
+    color: #ff6a80;
+    float: right;
+    font-style: italic;
+    padding-right: 15px;
+}
+
+#footer p a {
+    color: #9e9e9e;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#footer p a:hover {
+    color: #ff6a80;
+}
+
+.phan2 a {
+    color: #f8f3f3;
+    font-size: 15px;
+    text-decoration: none;
+    float: left;
+}
+
+.phan2 a:hover {
+    color: #ff6a80;
 }
