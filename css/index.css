@@ -1,3 +1,7 @@
+@charset "utf-8";
+
+/* CSS Document */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +11,8 @@ body {
     font-family: "Arial,Arial,Helvetica,sans-serif";
     font-size: 14px;
     line-height: 10px;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -24,6 +30,7 @@ header {
 header img {
     position: absolute;
     left: 200px;
+	top:2px;
 }
 
 .header-tt {
@@ -87,6 +94,8 @@ nav {
     width: 100%;
     height: 100px;
     background-color: white;
+	border-bottom:1px solid #999;
+
 }
 
 .logo {
@@ -126,10 +135,16 @@ nav {
 
 /*                 Phần nội dung                              */
 
+.content {
+    height: 500px;
+    margin: 0 auto;
+    padding: 0px;
+
+}
+
 aside {
     width: 100%;
-    height: 100px;
-    background-color: teal;
+    height: 310px;
 }
 
 aside img {
@@ -143,9 +158,9 @@ section {
 }
 
 section h1 {
+    color: orangered;
     margin: auto;
     text-align: center;
-    padding: 220px;
 }
 
 
@@ -201,3 +216,86 @@ section h1 {
 .phan2 a:hover {
     color: #ff6a80;
 }
+
+
+/*                          LOGIN                    */
+
+.login-box {
+    border: 1px solid white;
+    position: absolute;
+    top: 400px;
+    left: 750px;
+    width: 540px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 15px;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color:tomato;
+    text-align: center;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgb(6, 6, 6);
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid tomato;
+    outline: none;
+    background: transparent;
+}
+
+
+#nut{
+	width:100%;
+	height:30px;
+	background:#88b77b;
+	border-radius:15px;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.login-box form a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+}
+
+.login-box a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+.login-box a span input {
+    position: absolute;
+    display: block;
+}
+
+

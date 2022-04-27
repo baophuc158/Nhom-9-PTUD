@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,18 +6,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Trang chủ</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
     <header>
-        <a class="home" href="index.php"><img src="img/home.jpg" style="height:50px; width:50px;" /></a>
+        <a class="home" href="index.php"><img src="img/home.jpg" style="height:40px; width:40px;" /></a>
         <div class="header-tt">
-            <p>ĐT: 0563422001 <br> Email: <a href="">duchien23082000@gmail.com</a></p>
+            <p>Tel: 0286.555.444 <br> Email: <a href="">ttqt@gmail.com</a></p>
         </div>
         <div class="header-login">
-            <p>Bạn chưa đăng nhập. <a href="dnhap.html">(Đăng nhập)</a></p>
+            <p>Bạn chưa đăng nhập. <a href="loginadmin.php">(Đăng nhập)</a></p>
         </div>
     </header>
     <!--khung bao trang-->
@@ -24,7 +25,7 @@
         <!--Banner-->
 
         <div class="logo">
-            <a href="index.php"><img src="img/logo.jpg" style="width:300px; height:100px; float:left;" />
+                <a href="index.php"><img src="img/logo.jpg" style="width:200px; height:80px; float:left;" />
         </div>
         <!--Tìm Kiếm-->
         <div class="menu">
@@ -37,11 +38,9 @@
 
     </nav>
     <!--hết banner-->
-    <div class="content">
         <aside>
             <img src="img/PTUD BANNER.png" alt="">
         </aside>
-    </div>
     <section>
         <h1>Giới thiệu chung</h1>
         <p></p>
