@@ -55,21 +55,37 @@
             </div>
         </div>
         <div class="form-control">
+            <?php
+                include("../controller/cTruong.php");
+                $p=new cTruong();
+                                           
+                    $hien = $p->tttruong($_GET['MaTruong']);
+                    if($hien){                          
+                        if(mysqli_num_rows($hien)>0){
+                            while($cot=mysqli_fetch_assoc($hien)){?>
             <div class="form-control">
-                <center><b>TRƯỜNG THCS ABC</b></center>
+                <center style="text-tranform: uppercase">TRƯỜNG <?php echo $cot['TenTruong']; ?></center> 
             </div>
             <div class="row">
                 <div class="col-3"></div>
                 <div id="tt" style="border: 1px solid" class="col-6">
-                    <p style="border-bottom: 1px solid;">Mã trường: ABC01</p>
-                    <p style="border-bottom: 1px solid;">Địa chỉ: Đường ABC, xã ABC, huyện ABC, tỉnh ABC</p>
-                    <p style="border-bottom: 1px solid;">Ngày đăng kí sử dụng hệ thống: 11/11/2021</p>
-                    <p style="border-bottom: 1px solid;">Tổng số lớp: 40 lớp</p>
-                    <p style="border-bottom: 1px solid;">Tổng số học sinh: khoảng 900hs</p>
-                    <p style="border-bottom: 1px solid;">Mã người quản lí trường: QLABC01</p>
+                    <p style="border-bottom: 1px solid;">Mã trường: <?php echo $cot['MaTruong']; ?></p>
+                    <p style="border-bottom: 1px solid;">Địa chỉ: <?php echo $cot['DiaChi']; ?></p>
+                    <p style="border-bottom: 1px solid;">Ngày đăng kí sử dụng hệ thống: <?php echo $cot['NgayDK']; ?></p>
+                    <p style="border-bottom: 1px solid;">Tổng số lớp: <?php echo $cot['Tongsolop']; ?> lớp</p>
+                    <p style="border-bottom: 1px solid;">Mã người quản lí trường: <?php echo $cot['MaQTT']; ?></p>
                 </div>
                 <div class="col-3"></div>
             </div>
+            <?php
+                            }
+                        }
+                        else{
+                            echo "<script>alert('Không có dữ liệu')</script>";
+                        }
+                    }
+                
+            ?>
         </div>
     </div>
 </body>

@@ -58,32 +58,49 @@
                 <img id="user" src="../img/user.jpg" alt="">
             </div>
         </div>
+        <?php
+            include("../controller/cDiem.php");
+            $p=new cDiem();
+                $magv = 'giaovien';
+                $k = $p->monauto($magv);
+                while($row=mysqli_fetch_array($k)){
+                     $r = $row['MaMH'];
+                }                       
+                
+                $hien =$p->ttmonauto($r);
+                $l = $p->dslop($magv);
+                if($hien){?>
         <div class="row">
             <div style="border: 1px solid;">
-                <center>MÔN: TOÁN</center>
+                <center>MÔN: <?php echo $hien;?></center>
             </div>
         </div>
-
+        <?php
+                    }
+                
+                else{
+                    echo "<script>alert('Không có dữ liệu')</script>";
+                }
+                  
+        ?>
         <div class="row">
             <div class="form-control">
+                <?php
+                    if($l){
+                        if(mysqli_num_rows($l)>0){
+                            while($donglop=mysqli_fetch_assoc($l)){?>
                 <div class="form-control">
-                    <center><a href="vBangDiemGV.php">LỚP 6A1</a></center>
+                    <center><a href="vBangDiemGV.php?Tenlop=<?php echo $donglop['Tenlop']; ?>">LỚP <?php echo $donglop['Tenlop'] ?></a></center>
                 </div>
-                <div class="form-control">
-                    <center><a href="vBangDiemGV.php">LỚP 6A2</a></center>
-                </div>
-                <div class="form-control">
-                    <center><a href="vBangDiemGV.php">LỚP 7A3</a></center>
-                </div>
-                <div class="form-control">
-                    <center><a href="vBangDiemGV.php">LỚP 7A8</a></center>
-                </div>
-                <div class="form-control">
-                    <center><a href="vBangDiemGV.php">LỚP 8A1</a></center>
-                </div>
-                <div class="form-control">
-                    <center><a href="vBangDiemGV.php">LỚP 9A7</a></center>
-                </div>
+                <?php
+                            }
+                        }
+                        else{
+                            echo "<script>alert('Không có dữ liệu')</script>";
+                        }
+                    }
+                    ?>
+            </div>
             </div>
         </div>
 

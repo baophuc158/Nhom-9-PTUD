@@ -61,47 +61,45 @@
                 <img id="user" src="../img/user.jpg" alt="">
             </div>
         </div>
-
-        <div class="row">
-            <div class="form-control">
+        <div class="form-control">
             <form action="../index.php" method="post">
-                <center><b>Danh Sach</b></center>
-                <table border="1" cellspacing="0" style="width: 100%;">
-                    <tr style="text-align: center;">
-                        <th>STT</th>
-                        <th>Tên</th>
-                        <th>Số lớp</th>
-                        <th>Số lượng học sinh</th>
-                        <th>Số lượng giáo viên</th>
-                    </tr>
-                    <tr style="text-align: center;">
-                        <td>1</td>
-                        <td>THCS Lê Quý Đôn</td>
-                        <td>20</td>
-                        <td>775</td>
-                        <td>59</td>
-                    </tr>
-                    <tr style="text-align: center;">
-                        <td>2</td>
-                        <td>THCS Quang Trung</td>
-                        <td>9</td>
-                        <td>325</td>
-                        <td>27</td>
-                    </tr>
-                    <tr style="text-align: center;">
-                        <td>3</td>
-                        <td>THCS Lê Lợi</td>
-                        <td>20</td>
-                        <td>650</td>
-                        <td>40</td>
-                    </tr>
-                </table>
-                <div class="nut" style="float: right;">
+            <center><b>Danh Sach</b></center>
+            <?php
+                include("../controller/cTruong.php");
+                $p=new cTruong();
+                                           
+                    $hien = $p->truong();
+                    if($hien){                          
+                        if(mysqli_num_rows($hien)>0){
+                            while($cot=mysqli_fetch_assoc($hien)){?>
+            <div class="form-control">
+                <center style="text-tranform: uppercase">TRƯỜNG <?php echo $cot['TenTruong']; ?></center> 
+            </div>
+            <div class="row">
+                <div class="col-3"></div>
+                <div id="tt" style="border: 1px solid" class="col-6">
+                    <p style="border-bottom: 1px solid;">Mã trường: <?php echo $cot['MaTruong']; ?></p>
+                    <p style="border-bottom: 1px solid;">Địa chỉ: <?php echo $cot['DiaChi']; ?></p>
+                    <p style="border-bottom: 1px solid;">Ngày đăng kí sử dụng hệ thống: <?php echo $cot['NgayDK']; ?></p>
+                    <p style="border-bottom: 1px solid;">Tổng số lớp: <?php echo $cot['Tongsolop']; ?> lớp</p>
+                    <p style="border-bottom: 1px solid;">Mã người quản lí trường: <?php echo $cot['MaQTT']; ?></p>
+                </div>
+                <div class="col-3"></div>
+            </div>
+            <?php
+                            }
+                        }
+                        else{
+                            echo "<script>alert('Không có dữ liệu')</script>";
+                        }
+                    }
+                
+            ?>
+            <div class="nut" style="float: right;">
                                 <input type="submit" name="submit" value="Xác nhận">
                                 <input type="reset" name="huybo" value="Hủy bỏ">
                             </div>
             </form>  
-            </div>
         </div>
     </div>
 </body>
