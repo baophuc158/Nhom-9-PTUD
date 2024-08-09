@@ -1,4 +1,16 @@
-
+<?php
+session_start();
+if(isset($_SESSION['id']) && ($_SESSION['user']) && ($_SESSION['pass']))
+{
+	include ("class/clsloginquantri.php");
+	$q=new login();
+	$q->confirmlogin($_SESSION['id'],$_SESSION['user'],$_SESSION['pass']);
+}
+else
+{
+	header('location:loginquantri.php');	
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +18,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
+    <title></title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -17,7 +29,6 @@
             <p>Tel: 0286.555.444 <br> Email: <a href="">ttqt@gmail.com</a></p>
         </div>
         <div class="header-login">
-            <p>Bạn chưa đăng nhập. <a href="student.php">(Đăng nhập)</a></p>
         </div>
         
     </header>
@@ -40,12 +51,9 @@
     </nav>
     <!--hết banner-->
         <aside>
-            <img src="img/PTUD BANNER.png" alt="">
+            <img src="img/banner school.jpg" alt="" style="height: 700px;">
         </aside>
     <section>
-        <h1>Giới thiệu chung</h1>
-        <p></p>
-       
     </section>
 
 
